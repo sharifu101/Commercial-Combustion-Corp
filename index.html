@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commercial Combustion Corporation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { line-height: 1.6; color: #333; background: #fff; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Header */
+    header {
+      background: #003366;
+      color: #fff;
+      padding: 15px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    header img {
+      height: 50px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 12px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #ff6600; }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      background: url('https://images.unsplash.com/photo-1581091012184-5c9af6b19bb9') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 150px 20px;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .hero h2 { font-size: 48px; margin-bottom: 15px; font-weight: 700; }
+    .hero p { font-size: 20px; margin-bottom: 25px; }
+    .btn {
+      background: #ff6600;
+      color: #fff;
+      padding: 14px 28px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+    .btn:hover { background: #e05500; }
+
+    /* Sections */
+    section { padding: 80px 10%; }
+    section h2 { font-size: 32px; margin-bottom: 25px; text-align: center; font-weight: 700; color: #003366; }
+
+    /* About */
+    #about p { max-width: 800px; margin: auto; text-align: center; font-size: 18px; }
+
+    /* Services */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .card {
+      background: #fff;
+      padding: 30px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+    .card img {
+      height: 60px;
+      margin-bottom: 15px;
+    }
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 20px;
+      color: #003366;
+    }
+
+    /* Why Us */
+    .why {
+      background: #f5f7fa;
+      text-align: center;
+    }
+    .why ul { list-style: none; max-width: 600px; margin: auto; }
+    .why li {
+      margin: 12px 0;
+      font-weight: 500;
+      font-size: 18px;
+      color: #444;
+    }
+
+    /* Contact */
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      max-width: 600px;
+      margin: auto;
+    }
+    input, textarea {
+      padding: 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      width: 100%;
+      font-size: 16px;
+    }
+    textarea { resize: none; }
+    .contact h2 { margin-bottom: 20px; }
+    .g-recaptcha { margin: auto; }
+
+    /* Footer */
+    footer {
+      background: #003366;
+      color: #fff;
+      text-align: center;
+      padding: 25px 10px;
+      margin-top: 40px;
+      font-size: 15px;
+    }
+  </style>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="https://via.placeholder.com/180x50?text=LOGO" alt="Company Logo">
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Reliable Boiler & Combustion Services</h2>
+      <p>Serving commercial & industrial clients with trusted solutions and expert care.</p>
+      <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Request a Quote</button>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      At Commercial Combustion Corporation, we pride ourselves on decades of experience in
+      boiler installation, maintenance, and repair services. Our certified technicians deliver
+      reliable, cost-effective solutions tailored to the unique needs of businesses across industries.
+    </p>
+  </section>
+
+
+
+
+
+  
+  <!-- Services -->
+  <section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card">
+      <img src="pngtree-water-boiler-line-icon-png-image_9122724.png" alt="Boiler">
+      <h3>Boiler Installation</h3>
+      <p>Safe, efficient installation of industrial and commercial boiler systems.</p>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/003366/fire-element.png" alt="Burner">
+      <h3>Burner Services</h3>
+      <p>Expert burner maintenance and repair to keep your system efficient.</p>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/003366/maintenance.png" alt="Maintenance">
+      <h3>Preventative Maintenance</h3>
+      <p>Routine inspections and servicing to reduce downtime and costs.</p>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/003366/engineering.png" alt="Repairs">
+      <h3>Emergency Repairs</h3>
+      <p>24/7 rapid-response service to restore operations quickly.</p>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/003366/test-passed.png" alt="Testing">
+      <h3>Efficiency Testing</h3>
+      <p>Advanced combustion analysis to improve safety and efficiency.</p>
+    </div>
+    <!-- New Card Added -->
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/003366/map-marker.png" alt="Service Areas">
+      <h3>Service Areas</h3>
+      <p>Proudly serving commercial and industrial clients across multiple regions.</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Why Us -->
+  <section id="why" class="why">
+    <h2>Why Choose Us?</h2>
+    <ul>
+      <li>✔ Over 30 Years of Industry Experience</li>
+      <li>✔ Certified & Highly Trained Technicians</li>
+      <li>✔ 24/7 Emergency Service Available</li>
+      <li>✔ Commitment to Safety & Energy Efficiency</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form action="contact.php" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="tel" name="phone" placeholder="Your Phone" required />
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+      <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY_HERE"></div>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+
+
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Commercial Combustion Corporation | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
