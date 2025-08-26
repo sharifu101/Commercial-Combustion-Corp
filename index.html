@@ -3,12 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Commercial Combustion Corporation</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Commercial Combustion Corporation | Manhattan Boiler & Combustion Specialists</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-    body { line-height: 1.6; color: #333; background: #fff; }
-    a { text-decoration: none; color: inherit; }
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      line-height: 1.7;
+      color: #333;
+      background: #fff;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    h1, h2, h3 {
+      font-weight: 600;
+    }
+    p {
+      font-size: 16px;
+    }
 
     /* Header */
     header {
@@ -22,9 +41,7 @@
       top: 0;
       z-index: 999;
     }
-    header img {
-      height: 50px;
-    }
+    header img { height: 80px; }
     nav a {
       color: #fff;
       margin: 0 12px;
@@ -36,7 +53,7 @@
     /* Hero */
     .hero {
       position: relative;
-      background: url('https://images.unsplash.com/photo-1581091012184-5c9af6b19bb9') center/cover no-repeat;
+      background: url(images/boiler-burner.jpg) center/cover no-repeat;
       color: #fff;
       text-align: center;
       padding: 150px 20px;
@@ -48,11 +65,8 @@
       background: rgba(0,0,0,0.6);
       z-index: 0;
     }
-    .hero-content {
-      position: relative;
-      z-index: 1;
-    }
-    .hero h2 { font-size: 48px; margin-bottom: 15px; font-weight: 700; }
+    .hero-content { position: relative; z-index: 1; }
+    .hero h1 { font-size: 42px; margin-bottom: 15px; }
     .hero p { font-size: 20px; margin-bottom: 25px; }
     .btn {
       background: #ff6600;
@@ -68,10 +82,21 @@
 
     /* Sections */
     section { padding: 80px 10%; }
-    section h2 { font-size: 32px; margin-bottom: 25px; text-align: center; font-weight: 700; color: #003366; }
+    section h2 {
+      font-size: 32px;
+      margin-bottom: 25px;
+      text-align: center;
+      color: #003366;
+    }
 
-    /* About */
-    #about p { max-width: 800px; margin: auto; text-align: center; font-size: 18px; }
+    /* Content Blocks */
+    .content-block {
+      max-width: 1000px;
+      margin: auto;
+      text-align: justify; /* Justified text */
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
 
     /* Services */
     .services {
@@ -92,28 +117,16 @@
       transform: translateY(-8px);
       box-shadow: 0 6px 16px rgba(0,0,0,0.15);
     }
-    .card img {
-      height: 60px;
-      margin-bottom: 15px;
-    }
-    .card h3 {
-      margin-bottom: 12px;
-      font-size: 20px;
-      color: #003366;
-    }
+    .card img { height: 60px; margin-bottom: 15px; }
+    .card h3 { margin-bottom: 12px; font-size: 20px; color: #003366; }
 
-    /* Why Us */
-    .why {
-      background: #f5f7fa;
-      text-align: center;
+    /* Lists */
+    ul.list {
+      list-style: none;
+      max-width: 800px;
+      margin: 30px auto;
     }
-    .why ul { list-style: none; max-width: 600px; margin: auto; }
-    .why li {
-      margin: 12px 0;
-      font-weight: 500;
-      font-size: 18px;
-      color: #444;
-    }
+    ul.list li { font-size: 18px; margin: 10px 0; }
 
     /* Contact */
     .contact form {
@@ -131,7 +144,6 @@
       font-size: 16px;
     }
     textarea { resize: none; }
-    .contact h2 { margin-bottom: 20px; }
     .g-recaptcha { margin: auto; }
 
     /* Footer */
@@ -150,10 +162,11 @@
 
   <!-- Header -->
   <header>
-    <img src="https://via.placeholder.com/180x50?text=LOGO" alt="Company Logo">
+    <img src="images/CC-LOGO-removebg-preview.png" alt="Company Logo" width="140px">
     <nav>
       <a href="#about">About</a>
-      <a href="#services">Services</a>
+      <a href="service.html">Services</a>
+      <a href="#properties">Properties</a>
       <a href="#why">Why Us</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -162,8 +175,8 @@
   <!-- Hero -->
   <section class="hero">
     <div class="hero-content">
-      <h2>Reliable Boiler & Combustion Services</h2>
-      <p>Serving commercial & industrial clients with trusted solutions and expert care.</p>
+      <h1>Manhattan Boiler & Combustion Specialists</h1>
+      <p>Serving NYC since 1980 with boiler installation, combustion systems, HVAC & plumbing solutions.</p>
       <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Request a Quote</button>
     </div>
   </section>
@@ -171,67 +184,77 @@
   <!-- About -->
   <section id="about">
     <h2>About Us</h2>
-    <p>
-      At Commercial Combustion Corporation, we pride ourselves on decades of experience in
-      boiler installation, maintenance, and repair services. Our certified technicians deliver
-      reliable, cost-effective solutions tailored to the unique needs of businesses across industries.
-    </p>
+    <div class="content-block">
+      <p>For over 40 years, Commercial Combustion Corporation has been Manhattan’s leading boiler installation and combustion system expert, trusted for heating, HVAC, and plumbing solutions across New York City. Since 1980, our 170+ Class “A” licensed technicians have delivered high-performance steam and hydronic boilers, combustion systems, and burner tune-ups that keep buildings compliant with NYC DEP, DOB, and Local Law 97.</p>
+      <p>From residential boiler replacements on the Upper West Side to commercial burner service in Midtown, hospital boiler maintenance, and multi-family heating solutions in Brooklyn, we provide 24/7 emergency response and code-compliant installations across Manhattan and the Tri-State Area.</p>
+      <br>
+      <p><strong>📞 Call (718) 210-7664 today for Manhattan’s most trusted boiler and combustion specialists.</strong></p>
+    </div>
   </section>
 
-
-
-
-
-  
   <!-- Services -->
   <section id="services">
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="card">
-      <img src="pngtree-water-boiler-line-icon-png-image_9122724.png" alt="Boiler">
-      <h3>Boiler Installation</h3>
-      <p>Safe, efficient installation of industrial and commercial boiler systems.</p>
+    <h2>Boiler & Combustion Services in Manhattan</h2>
+    <div class="services">
+      <div class="card"><img src="images/pngtree-water-boiler-line-icon-png-image_9122724.png"><h3>Boiler Installation</h3><p>Gas, oil, steam, and hydronic systems customized for Manhattan buildings.</p></div>
+      <div class="card"><img src="https://img.icons8.com/ios-filled/100/003366/fire-element.png"><h3>Combustion System Experts</h3><p>Burner installations, tune-ups, and DEP emissions compliance.</p></div>
+      <div class="card"><img src="https://img.icons8.com/ios-filled/100/003366/maintenance.png"><h3>Boiler Repairs & Maintenance</h3><p>24/7 service to keep your system running safely and efficiently.</p></div>
+      <div class="card"><img src="https://img.icons8.com/ios-filled/100/003366/engineering.png"><h3>Emergency Repairs</h3><p>Rapid-response service to restore operations quickly.</p></div>
+      <div class="card"><img src="https://img.icons8.com/ios-filled/100/003366/test-passed.png"><h3>Compliance Testing</h3><p>DEP tune-ups, combustion analysis, and safety inspections.</p></div>
+      <div class="card"><img src="https://img.icons8.com/ios-filled/100/003366/map-marker.png"><h3>Oil to Gas Conversions</h3><p>Switch to cleaner, cost-effective heating with our expert conversions.</p></div>
     </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/003366/fire-element.png" alt="Burner">
-      <h3>Burner Services</h3>
-      <p>Expert burner maintenance and repair to keep your system efficient.</p>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/003366/maintenance.png" alt="Maintenance">
-      <h3>Preventative Maintenance</h3>
-      <p>Routine inspections and servicing to reduce downtime and costs.</p>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/003366/engineering.png" alt="Repairs">
-      <h3>Emergency Repairs</h3>
-      <p>24/7 rapid-response service to restore operations quickly.</p>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/003366/test-passed.png" alt="Testing">
-      <h3>Efficiency Testing</h3>
-      <p>Advanced combustion analysis to improve safety and efficiency.</p>
-    </div>
-    <!-- New Card Added -->
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/003366/map-marker.png" alt="Service Areas">
-      <h3>Service Areas</h3>
-      <p>Proudly serving commercial and industrial clients across multiple regions.</p>
-    </div>
+  </section>
+
+  <!-- About -->
+<section id="about">
+  <h2>About Us</h2>
+  <div class="content-block centered-text ">
+    <p style=" text-align: justify;">For over 40 years, Commercial Combustion Corporation has been Manhattan’s leading boiler installation and combustion system expert, trusted for heating, HVAC, and plumbing solutions across New York City. Since 1980, our 170+ Class “A” licensed technicians have delivered high-performance steam and hydronic boilers, combustion systems, and burner tune-ups that keep buildings compliant with NYC DEP, DOB, and Local Law 97.
+   From residential boiler replacements on the Upper West Side to commercial burner service in Midtown, hospital boiler maintenance, and multi-family heating solutions in Brooklyn, we provide 24/7 emergency response and code-compliant installations across Manhattan and the Tri-State Area.</p>
+   <br>
+   <p><strong>📞 Call (718) 210-7664 today for Manhattan’s most trusted boiler and combustion specialists.</strong></p>
   </div>
 </section>
 
+<!-- Property Types -->
+<section id="properties">
+  <h2>Property Types We Serve</h2>
+  <ul class="list centered-text">
+    <li style="text-align: justify;">🏠 <strong>Residential</strong>: Boiler & heating service for brownstones, co-ops, and condos.</li>
+    <li style="text-align: justify;">🏢 <strong>Commercial</strong>: Office towers, hotels & retail spaces needing large-scale systems.</li>
+    <li style="text-align: justify;">🏥 <strong>Medical</strong>: Heating & sterilization systems for hospitals, labs & surgical centers.</li>
+    <li style="text-align: justify;">🏭 <strong>Industrial</strong>: Heavy-duty steam & hydronic boilers for factories & warehouses.</li>
+    <li style="text-align: justify;">🏘️ <strong>Multi-Family</strong>: Heating & plumbing for apartment complexes & property managers.</li>
+  </ul>
+</section>
 
-  <!-- Why Us -->
-  <section id="why" class="why">
-    <h2>Why Choose Us?</h2>
-    <ul>
-      <li>✔ Over 30 Years of Industry Experience</li>
-      <li>✔ Certified & Highly Trained Technicians</li>
-      <li>✔ 24/7 Emergency Service Available</li>
-      <li>✔ Commitment to Safety & Energy Efficiency</li>
-    </ul>
-  </section>
+<!-- Why Us -->
+<section id="why">
+  <h2>Why Manhattan Chooses Us</h2>
+  <ul class="list centered-text">
+    <li style="text-align: justify;">✔ NYC Boiler Experts Since 1980</li>
+    <li style="text-align: justify;">✔ Specialized in Combustion & DEP Compliance</li>
+    <li style="text-align: justify;">✔ 170+ Licensed Technicians – 24/7 Emergency Response</li>
+    <li style="text-align: justify;">✔ 30,000 Sq. Ft. Facility Stocked with Parts</li>
+    <li style="text-align: justify;">✔ Trusted by 500+ Clients Managing 2,500+ NYC Buildings</li>
+  </ul>
+</section>
+
+<!-- Energy Efficiency -->
+<section>
+  <h2>Energy Efficiency & Compliance</h2>
+  <div class="content-block centered-text text-align: justify;">
+    <p>We help NYC building owners save money and stay compliant through boiler energy audits, combustion analysis, and DEP-certified tune-ups. Our upgrades not only cut fuel costs but also keep properties aligned with Local Law 97 sustainability goals and Tri-State energy standards.</p>
+  </div>
+</section>
+
+<style>
+  /* Center all subtext content */
+  .centered-text {
+    text-align: center;
+  }
+</style>
+
 
   <!-- Contact -->
   <section id="contact" class="contact">
@@ -245,10 +268,6 @@
       <button type="submit" class="btn">Send Message</button>
     </form>
   </section>
-
-
-
-
 
   <!-- Footer -->
   <footer>
