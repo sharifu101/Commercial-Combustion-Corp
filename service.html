@@ -121,13 +121,44 @@
 </head>
 <body>
 
+
+<style>
+  /* Header */
+    header {
+      background: #003366;
+      color: #fff;
+      padding: 15px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    header img { height: 140px; }
+    nav a {
+      color: #fff;
+      margin: 0 12px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #ff6600; }
+
+</style>
+  
+<!-- Header -->
   <header>
+    <img src="images/CC-LOGO-removebg-preview.png" alt="Company Logo" height="300px" width="300px">
     <nav>
       <a href="index.html">Home</a>
+      <!-- <a href="#about">About</a> -->
+      <a href="service.html">Services</a>
+      <!-- <a href="#properties">Properties</a> -->
+      <!-- <a href="#why">Why Us</a> -->
+      <!-- <a href="#contact">Contact</a> -->
     </nav>
-    <h1>Commercial Combustion Corp Services – Manhattan, NYC</h1>
-    
   </header>
+
 
   <section>
     <p>
@@ -276,9 +307,45 @@
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Commercial Combustion Corp. All rights reserved.</p>
-  </footer>
+  
+  
+  <!-- Footer -->
+<footer style="background:#003366; color:#fff; text-align:center; padding:25px 15px; margin-top:40px; font-size:15px; line-height:1.6; font-family:Arial, sans-serif;">
+
+  <!-- Company Logo -->
+  <div style="margin-bottom:15px;">
+    <img src="images/ConEd-Participating-Contractor-Commercial-Combustion-Corp.png" alt="Commercial Combustion Corporation Logo" style="max-width:280px; height:auto;">
+  </div>
+
+  <p style="margin:8px 0; font-weight:bold; text-align: center;">
+    Address: 600 3rd Ave, 2nd FLR, New York, NY 10016
+  </p>
+
+  <p style="margin:12px 0; text-align: center">
+    🏙️ From Manhattan high-rises to NYC hospitals, industrial plants, and multi-family buildings, <br> 
+    Commercial Combustion Corporation is the go-to provider for boiler installation, combustion services, 
+  </p>
+
+  <p style="margin:12px 0; font-weight:bold; text-align: center">
+    📞 Call <a href="tel:+17182107664" style="color:#fff; text-decoration:none;">(718) 210-7664</a> today for 24/7 Manhattan boiler service and combustion expertise.
+  </p>
+
+  <p style="margin:12px 0; font-weight: bold; text-align: center">
+    📧 For 24/7/365 support please email our Help Desk - 
+    <a href="mailto:helpdesk@commercialcombustion.org text-align: center" style="color:#fff; text-decoration:underline; font-weight: bold;">
+      helpdesk@commercialcombustion.org
+    </a>
+  </p>
+
+  <hr style="border:0; border-top:1px solid rgba(255,255,255,0.3); margin:20px auto; width:80%;">
+
+  <p style="margin:5px 0; font-size:14px; text-align: center">
+    &copy; 2025 Commercial Combustion Corporation | All Rights Reserved
+  </p>
+</footer>
+
+
+
 
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
