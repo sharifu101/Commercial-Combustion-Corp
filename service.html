@@ -123,44 +123,64 @@
 
 
 <style>
-  /* Header */
-    header {
-      background: #003366;
-      color: #fff;
-      padding: 15px 10%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-    header img { height: 140px; }
-    nav a {
-      color: #fff;
-      margin: 0 12px;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-    nav a:hover { color: #ff6600; }
+      /* Header */
+header {
+  background: #003366;
+  color: #fff;
+  padding: 5px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  height: 120px;
+}
+
+header img { 
+  height: 180px; 
+}
+
+nav a {
+  color: #fff;
+  margin: 0 12px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover { 
+  color: #ff6600; 
+}
+
+/* Phone Number */
+.phone {
+  font-weight: bold;
+  font-size: 18px;
+  color: #ffcc00;
+  margin-left: 20px;
+}
 
 </style>
   
-<!-- Header -->
-  <header>
-    <img src="images/CC-LOGO-removebg-preview.png" alt="Company Logo" height="300px" width="300px">
-    <nav>
-      <a href="index.html">Home</a>
-      <!-- <a href="#about">About</a> -->
-      <a href="service.html">Services</a>
-      <!-- <a href="#properties">Properties</a> -->
-      <!-- <a href="#why">Why Us</a> -->
-      <!-- <a href="#contact">Contact</a> -->
-    </nav>
-  </header>
+<header>
+  <img src="images/CC-LOGO-removebg-preview.png" alt="Company Logo" width="350px">
+<div class="phone">
+    📞 (123) 456-7890
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="index.html">Services</a>
+    <a href="#properties">Properties</a>
+    <a href="#why">Why Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  
+</header>
 
 
   <section>
+    <h1 style="color: #004080;
+    margin-bottom: 20px;">Boiler Services in New York</h1>
     <p>
       Welcome to Commercial Combustion Corp, Manhattan’s trusted leader in commercial heating, HVAC, and plumbing solutions since 1980. Serving all of NYC, including Manhattan, Brooklyn, Queens, the Bronx, and Staten Island, we specialize in high-quality boiler installation, burner services, preventative maintenance, emergency repairs, oil-to-gas conversions, HVAC, plumbing, and DEP tune-ups. We are a Con-Ed Approved Contractor.  Our team of skilled technicians are dedicated to keeping your business running smoothly with energy-efficient, code-compliant solutions. Contact us at (718) 210-7664 for 24/7 service!
    <br>
@@ -180,6 +200,17 @@
       color: #333;
     }
 
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+
+    
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

@@ -30,25 +30,41 @@
     }
 
     /* Header */
-    header {
-      background: #003366;
-      color: #fff;
-      padding: 15px 10%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-    header img { height: 140px; }
-    nav a {
-      color: #fff;
-      margin: 0 12px;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-    nav a:hover { color: #ff6600; }
+header {
+  background: #003366;
+  color: #fff;
+  padding: 5px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  height: 120px;
+}
+
+header img { 
+  height: 180px; 
+}
+
+nav a {
+  color: #fff;
+  margin: 0 12px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover { 
+  color: #ff6600; 
+}
+
+/* Phone Number */
+.phone {
+  font-weight: bold;
+  font-size: 18px;
+  color: #ffcc00;
+  margin-left: 20px;
+}
 
     /* Hero */
     .hero {
@@ -160,17 +176,20 @@
 </head>
 <body>
 
-  <!-- Header -->
   <header>
-    <img src="images/CC-LOGO-removebg-preview.png" alt="Company Logo" height="300px" width="300px">
-    <nav>
-      <a href="#about">About</a>
-      <a href="service.html">Services</a>
-      <a href="#properties">Properties</a>
-      <a href="#why">Why Us</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <img src="images/CC-LOGO-removebg-preview.png" alt="Company Logo" width="350px">
+<div class="phone">
+    📞 (123) 456-7890
+  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="service.html">Services</a>
+    <a href="#properties">Properties</a>
+    <a href="#why">Why Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  
+</header>
 
   <!-- Hero -->
   <section class="hero">
@@ -191,11 +210,11 @@
     <br>
     <p><strong>📞 Call (718) 210-7664 today for Manhattan’s most trusted boiler and combustion specialists.</strong></p>
 
-    
 </section>
 
+
   <!-- Services -->
-  <section id="services">
+  <section style="margin-top: -100px;" id="services">
     <h2>Boiler & Combustion Services in Manhattan</h2>
     <div  class="services">
       <div  class="card"><img src="images/pngtree-water-boiler-line-icon-png-image_9122724.png"><h3>Boiler Installation & Replacement </h3><p>Gas, oil, steam, and hydronic systems customized for Manhattan’s residential, commercial, and industrial buildings.</p></div>
@@ -270,7 +289,7 @@
 
 
 <!-- Why Us -->
-<section id="why">
+<section style="margin-top: -100px;" id="why">
   <h2>Why Manhattan Chooses Us</h2>
   <ul class="list centered-text">
     <li style="text-align: justify;">✔ NYC Boiler Experts Since 1980</li>
@@ -282,7 +301,7 @@
 </section>
 
 <!-- Energy Efficiency -->
-<section>
+<section style="margin-top: -100px;">
   <h2>Energy Efficiency & Compliance</h2>
   <div class="content-block centered-text text-align: justify;">
     <p>We help NYC building owners save money and stay compliant through boiler energy audits, combustion analysis, and DEP-certified tune-ups. Our upgrades not only cut fuel costs but also keep properties aligned with Local Law 97 sustainability goals and Tri-State energy standards.</p>
@@ -301,6 +320,58 @@
     text-align: center;
   }
 </style>
+
+
+
+
+
+
+<!-- Full-Width Image Section -->
+<section class="banner-section">
+  <div class="banner-content">
+    <h2 style="color: white;">Commercial Combustion Corporation</h2>
+    <p>Trusted Heating, HVAC & Plumbing Experts in NYC since 1980</p>
+  </div>
+</section>
+
+<style>
+/* Full-Width Image Section */
+.banner-section {
+  position: relative;
+  width: 100%;
+  height: 70vh; /* adjust height */
+  background: url('images/modern-industrial-boiler-room-with-compressor-equipment-control-panel_508835-659.avif') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-section::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay */
+}
+
+.banner-content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+
+.banner-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.banner-content p {
+  font-size: 1.2rem;
+}
+</style>
+
+
 
 
   <!-- Contact -->
